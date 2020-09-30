@@ -1,0 +1,15 @@
+int firstDuplicate(int[] a) {
+    
+    HashSet<int> set = new HashSet<int>();
+
+    for(var i = 0; i <= a.Length - 1; i++)
+        {
+            if (set.Contains(a[i]))
+            {
+                return a[i];
+            }
+        set.Add(a[i]);
+        }
+            
+    return -1;
+}
